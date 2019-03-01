@@ -26,7 +26,8 @@ class App extends Component {
         const value = real_data[currentKey]
         const tmp = {
           x: new Date(currentKey),
-          y: [parseFloat(value['1. open']), parseFloat(value['2. high']), parseFloat(value['3. low']), parseFloat(value['4. close'])]
+          y: [parseFloat(value['1. open']), parseFloat(value['2. high']), parseFloat(value['3. low']), parseFloat(value['4. close'])],
+          color: parseFloat(value['1. open']) > parseFloat(value['4. close']) ? 'red' : 'green'
         }
         result.push(tmp);
         return result;
@@ -34,7 +35,7 @@ class App extends Component {
 
       console.log(newData)
       this.setState({
-        data_point: newData
+        data_point: newData.slice(0, 30)
       })
     })
   }
@@ -50,8 +51,8 @@ class App extends Component {
 			},
 			axisX: {
 				interval:1,
-				intervalType: "year",
-				valueFormatString: "YYYY"
+				intervalType: "day",
+				valueFormatString: "DD"
 			},
 			axisY: {
 				includeZero:false,
