@@ -1,8 +1,8 @@
 # OHLC Sample
 
-Shows OHLC Chart with CanvasJS. Load data from [Alpha Vantage](https://www.alphavantage.co/). You get API Key [here](https://www.alphavantage.co/support/#api-key)
+Shows OHLC Chart with CanvasJS. Load data from [Alpha Vantage](https://www.alphavantage.co/). You can get API Key [here](https://www.alphavantage.co/support/#api-key)
 
-![](./screenshot.png?raw=true)
+![](./screenshot.PNG?raw=true)
 
 ## Quick Start
 ```bash
